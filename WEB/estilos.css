@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-image: url(./imagenes/pattern.png);
+    line-height: 1.8rem;
+    
+}
+img {
+    max-width: 300px;
+   
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    justify-content: start;
+    background-color: #333;
+    padding: .5rem;
+}
+
+
+header div {
+    background-color: #37bcf9;
+    padding: .5rem 2rem;
+    border-radius: 2px;   
+    position: relative; 
+}
+
+header div:hover {
+    
+    background-color: green;
+    
+}
+
+header div a {    
+    text-decoration: underline;
+    /*animation: moverseDerechaToIzquierda 1s;*/
+}
+
+
+
+nav {
+    margin: auto;
+}
+
+nav a {
+    margin-right: 1rem;
+}
+
+nav a:hover {
+    animation: aumentarTexto 0.8s;
+}
+
+.contenedor-div-titulo {   
+    background-color: #fff;    
+    margin: 1rem 8rem;    
+    border: 1px solid #ddd;
+    padding: .5rem;
+}
+
+.contenedor-div-titulo div {
+    background-image: linear-gradient(to right, rgb(0, 37, 67) , rgb(0, 97, 160));
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin:1.5rem 3rem;
+    color: rgb(0, 97, 160);
+}
+
+.tarjeta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    cursor: pointer;
+    text-align: center;    
+}
+
+.tarjeta:hover {
+    
+    animation: efectoTarjeta 2s;
+}
+
+.contenedor-subtitulo {
+    background-image: url(./imagenes/pxgray.png);
+    margin: 1rem 3rem;
+    margin-bottom: 0;
+    padding: .5rem;
+    text-align: center;
+}
+
+.contenedor-info {
+    margin: 0 3rem;
+    background-image: url(./imagenes/paven.png);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    
+}
+
+.contenedor-img {
+    background-image: linear-gradient(to right, rgb(0, 37, 67) , rgb(0, 97, 160));
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.contenedor-tarjeta-horizontal {
+    margin-left: 1rem;
+}
+
+.tajerta-horizontal {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    box-shadow: 5px 5px 2px #aaaaaa;
+    text-align: right;
+}
+
+.tajerta-horizontal h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.tajerta-horizontal p {
+    margin-right: 1rem;
+}
+
+.tajerta-horizontal a {
+    
+    display: inline-block;
+    border-radius: 0px 0px 0px 10px;
+    padding: .5rem;
+    background-color: #333;
+}
+
+.tercera {
+    margin: 1rem 0 0 0;
+    padding: 1.5rem 0;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+
+.tercera hr {
+    margin-left: 15%;
+    max-width: 70%;
+    margin-bottom: 1.5rem;
+}
+
+.menu-ubicacion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-ubicacion h3 {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.menu-ubicacion li {
+    text-align: left;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+/*efectos*/
+
+@keyframes efectoTarjeta {
+    0% {        
+        background-color: #fff;
+        color: #37bcf9;
+    }
+    100% {
+        background-color: #333;
+        color: #fff;        
+    }
+    
+}
+
+@keyframes aumentarTexto {
+    0% {
+        color: #fff;
+    }
+    100% {
+        font-size: 1.5rem;
+        color: #37bcf9;
+    }
+    
+}
+
+@keyframes cambiarColor {
+    0% {
+        background-color: green;
+    }
+    100% {
+        background-color: #37bcf9;
+    }
+    
+}
+
+@keyframes moverseDerechaToIzquierda {
+
+    0% {
+        transform: translateX(1200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    
+}
+
+/*formatear para celular*/
+@media (max-width: 450px) {
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    header div {
+        grid-column: 1 / 2;
+    }
+
+    header nav {
+        grid-column: 3 / 6;
+    }
+
+    section .primera {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .contenedor-div-titulo {
+        margin: 0;
+        grid-column: 0 / 6;
+    }
+
+    .contenedor-tarjetas {
+        display: block;
+        margin: 1.5rem 3rem;
+        color: rgb(0, 97, 160);
+    }
+
+    .tarjeta {
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-info {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .contenedor-img {
+        max-width: 100%;
+        grid-column: 1 / 7;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-tarjeta-horizontal {
+        grid-column: 1 / 7;
+    }
+
+    .menu-ubicacion {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .menu-ubicacion div {
+        max-width: 100%;
+        grid-column: 2 / 5;
+        margin-bottom: 1rem;       
+    }
+   
+}
